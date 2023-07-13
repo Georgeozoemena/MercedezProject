@@ -1,0 +1,124 @@
+@font-face {
+    font-family: customized;
+    src: url(../../Font/SUPER\ PUNCH.ttf);
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container, .input-div, .wrapper, body {
+    display: flex;
+    align-items: center;
+}
+.container, body, .wrapper {
+    justify-content: center;
+}
+.wrapper {   
+    position: relative;
+    width: 400px;
+    height: 440px;
+    padding: 40px 0;
+    margin-top: 25%;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px 0 #727272;
+}
+.header {
+    font-family: customized;
+    font-size: 2em;
+    margin-bottom: 35px;
+}
+img {
+    width: 28px;
+}
+.wrapper, .form-Box {
+    width: 100%;
+    padding: 40px 30px;
+}
+.form-Box {
+    text-align: center;
+}
+.input-container {
+    margin-bottom: 20px;
+}
+.input-div {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    margin: 30px 0;
+    border-bottom: 2px solid #000000;
+}
+.input-div input {
+    padding: 0 35px 0px 5px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 540;
+    background: transparent;
+}
+.input-div input:focus~label,
+.input-div input:valid~label {
+    top: -5px;
+    transition: transform ease-in-out .5s;
+}
+.input-div label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.input-div .icon {
+    position: absolute;
+    right: 5px;
+    line-height: 50px;
+}
+.pwd {
+    display: flex;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: -5px 0 25px 0;
+    justify-content: space-between;
+}
+.pwd label input {
+    margin-right: 5px;
+}
+.btn-container {
+    margin-bottom: 20px;
+}
+.btn-container button {
+    width: 100%;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    background: #e0a500;
+    font-family: sans-serif;
+    border-radius: 3px;
+    transition: ease-in-out .5s;
+}
+.btn-container button:hover {
+    color: #fff;
+    background: #b98904e0;
+}
+.pwd a {
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.pwd a:hover {
+    text-decoration: underline;
+}
+.sign-up-link a{
+    margin-left: 4px;
+    color: #996a04;
+    text-decoration: none;
+}

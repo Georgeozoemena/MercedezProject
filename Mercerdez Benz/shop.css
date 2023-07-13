@@ -1,0 +1,373 @@
+@font-face {
+    font-family: customized;
+    src: url(../Font/SUPER\ PUNCH.ttf);
+}
+
+* {
+    margin: 0; padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: block;
+    z-index: 1;
+}
+.content1 {
+    margin: 0 4vw;
+}
+
+header, .nav-bar ul, .product, .parts, .specifications, .car-details {
+    display: flex;
+}
+
+header, .nav-bar ul, .product, .car-details {
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0; right: 0;
+    padding: 20px 4vw;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    box-shadow: 0 1px 15px 0 #e9e9e9;
+}
+
+.nav-bar ul li {
+    font-size: large;
+    margin: 0 40px;
+}
+
+.nav-bar ul li a {
+    position: relative;
+    color: #000000;
+    transition: ease-in-out;
+}
+
+.nav-bar ul li a::after {
+   position: absolute;
+   content: '';
+   left: 0;
+   width: 100%;
+   bottom: -8px;
+   transform: scaleX(0);
+   border-radius: 100px;
+   transform-origin: right;
+   border: 2px solid #000000;
+   transition: transform ease-in-out .5s;
+}
+
+.nav-bar ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+
+.logo {
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: customized;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-family: sans-serif;
+    border: 2px solid #000000;
+}
+
+
+button:hover, .specifications button:hover {
+    color: #fff;
+    transition: 0.5s;
+    border: 2px solid #e0a500;
+    background-color: #e0a500;
+}
+
+
+.section1 {
+    overflow: hidden;
+    height: 61vh;
+    padding: 18vh 0 5vw;
+}
+
+.product {
+    flex-direction: column;
+    padding: 5vh 0;
+}
+
+.product div {
+    margin: 0 10px;
+}
+
+.product-name {
+    text-align: center;
+}
+
+.product-img-mobile img {
+    opacity: 0;
+    /* display: none; */
+}
+
+.product-name h1 {
+    font-size: 4vw;
+    font-family: customized;
+}
+
+.product-name p {
+    font-size: 2vw;
+}
+
+.product-name h1, .product-name p, .log, .logo {
+    cursor: default;
+}
+
+.log {
+    position: absolute;
+    display: flex;
+    font-size: 15vw;
+    color: #ccc8c8;
+    text-align: center;
+    flex-direction: column;
+    font-family: customized;
+    left: 0; right: 0; top: 30%;
+}
+
+.product {
+    position: absolute;
+    display: flex;
+    top: 30%;
+    margin: 0 4vw;
+    left: 0; right: 0;
+    flex-direction: row;
+    text-align: justify;
+    justify-content: space-evenly;
+}
+
+
+.product div {
+    flex: 2 2 0%;
+}
+
+.product-img img {
+    width: 120%;
+    transform: rotate(2deg);
+    margin: 0 15vw 0 1vw;
+}
+
+.product-detail {
+    line-height: 170%;
+}
+
+.product-detail h1 {
+    padding-left: 5px;
+    border-left: 6px solid #e0a500;
+    font-size: 2.5vw;
+}
+
+.product-detail p {
+    margin: 25px 0;
+}
+
+.price {
+    text-align: end;
+}
+
+.price h2 {
+    font-weight: lighter;
+}
+
+.price p {
+    font-size: 2vw;
+    color: #e0a500;
+    font-weight: bolder;
+}
+
+
+.specifications {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    color: #fff;
+    margin-top: 4vh;
+    padding: 2.4% 0 1%;
+    background-color: #0a0a0a;
+    justify-content: space-evenly;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.specifications button {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.specifications h3 {
+    margin-bottom: 10px;
+}
+
+
+.car-details {
+    display: flex;
+    flex: 2 1 1%;
+    margin-bottom: 5vh;   
+    justify-content: space-evenly;
+}
+
+.hamburger {
+    display: none;
+}
+
+.parts {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parts img {
+    width: 200px;
+}
+
+/* 1320, 1100, 900 */
+@media only screen and (max-width: 1320px){
+    .content1 {
+        margin: 0 2vw;
+    }
+    .product {
+        top: 25%;
+    }
+    .product-img-mobile {
+        display: block;
+        text-align: center;
+        padding: 5% 0;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .product {
+        top: 25%;
+    }
+    .product-img-mobile {
+        display: block;
+        text-align: center;
+        padding: 5% 0;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .content1 {
+        margin: 0 5vw;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        width: 30px;
+    }
+
+    .line {
+        margin: 6px 0;
+        border: 2px solid #000000;
+    }
+    
+    .nav-bar {
+        position: absolute;
+        top: 60px; 
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: 0.7s;
+        left: 0; right: 0;
+        backdrop-filter: blur(15px);
+    }
+    header{
+        background: #fffbfb;
+        padding: 2% 6%;
+        justify-content: space-between;
+    }
+    
+    .nav-bar ul {
+        display: block;
+        text-align: center;
+        margin: 40px auto 0 auto;
+        opacity: 0;
+    }
+    
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+
+    .nav-bar ul li {
+        margin: 25px 0;
+    }
+
+    .nav-bar.active {
+        height: 300px;
+        background-color: #fcfcfcf3;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .container {
+        z-index: 100;
+        overflow:hidden;
+    }
+    
+    .section1 {
+        height: 100%;
+        padding-top: 20%;
+    }
+    
+    .log {
+        display: none;       
+        top: 30%;
+    }
+
+    .logo {
+        font-size: 100%;
+    }
+    .product {
+        display: block;
+        position: relative;
+    }
+    .product-detail h1 {
+        font-size: 110%;
+    }
+    .product-img-mobile {
+        display: block;
+        text-align: center;
+        padding: 5% 0;
+    }
+
+    .product-img-mobile img {
+        width: 65%;
+        opacity: 1;
+    }
+    .product-img {
+        display: none;
+    }
+    .specifications {
+        display: none;
+    }
+    .price {
+        display: none;
+    }
+    .product-name h1 {
+        margin-bottom: 1vh;
+    }
+    .product-name p {
+        font-size: 2vw;
+    }
+}
